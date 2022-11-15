@@ -2,7 +2,10 @@ package com.example.project_over;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
+import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -10,15 +13,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-    }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-    }
-
-    @Override
-    protected  void  onStop() {
-        super.onStop();
+        Intent intent = getIntent();
+        String str = intent.getExtras().getString("키");
+        ((EditText)findViewById(R.id.edit_text)).setText(str);
     }
 }

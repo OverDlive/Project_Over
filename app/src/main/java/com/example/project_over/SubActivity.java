@@ -1,5 +1,6 @@
 package com.example.project_over;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
@@ -24,6 +25,15 @@ public class SubActivity  extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 log.d("로그", "값");
+            }
+        });
+
+        findViewById(R.id.Btn3).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(SubActivity.this, MainActivity.class);
+                intent.putExtra("키", "위");
+                startActivity(intent);
             }
         });
     }

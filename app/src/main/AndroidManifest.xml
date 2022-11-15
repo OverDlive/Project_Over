@@ -12,6 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Project_Over"
         tools:targetApi="31">
+        <activity android:name=".MainActivity"/>
         <activity
             android:name=".SubActivity"
             android:exported="true">
